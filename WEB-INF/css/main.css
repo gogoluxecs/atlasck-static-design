@@ -11,8 +11,8 @@
 
 body {
 	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
-	color: #000;
-	font-size: 13px;
+	color: #333;
+	font-size: 14px;
 	text-align: center
 	}
 
@@ -26,7 +26,7 @@ body {
 
 b, strong { font-weight:bold }
 
-a, a:active {  outline: none }
+a, a:active {  outline: none; color:#333; text-decoration:none }
 
 .clearfix:after {
 	content: ".";
@@ -52,8 +52,6 @@ html[xmlns] .clearfix {
 /* Layout styles */
 
 #wrapper {
-	background: yellow;
-	
 	margin: 0 auto;
 	min-height: 100%;
 	text-align: left;
@@ -71,8 +69,6 @@ html[xmlns] .clearfix {
 	}
 
 #body {
-	background: lightblue;	
-	
 	min-height: 240px;
 	height: 240px;
 	position: relative;
@@ -82,8 +78,6 @@ html[xmlns] .clearfix {
 	}
 
 #footer {
-	background: gray;
-	
 	width: 100%;
 	bottom: 0px;
 	height: 277px;
@@ -101,7 +95,7 @@ html[xmlns] .clearfix {
 	}
 
 #header .content {
-	background:url(/images/bgr-header.jpg) 300px 10px no-repeat;
+	background:url(/images/bgr-header.png) 325px 5px no-repeat;
 	}
 
 #subheader {
@@ -146,23 +140,90 @@ html[xmlns] .clearfix {
 	} 
 
 #rightContainer {
-	width:694px
+	width:694px;
 	}
 
 #rightContainer .content {
-	margin:0 auto;
-	padding:0px;
 	width: 580px;
+	margin: 0 auto;
+	padding: 0px;
 	}
 
 
 #leftMenu {
+	
+	}
+
+#leftMenu li {
 	margin:0 auto;
-	width:210px
+	width:206px;
+	padding-left:4px;
+	background:#c8c8c8;	
+	margin-bottom:17px;
+	}
+
+#leftMenu .aboutTheCompany.active {
+	background:#D79056	
+	}
+	
+#leftMenu .aboutTheCompany.active a {
+	color:#D79056
+	}	
+	
+#leftMenu .services.active {
+	background:#56B7D7
+	}
+
+#leftMenu .onineConsultations.active {
+	background:#BD56D7
+	}
+	
+#leftMenu .feedback.active {	
+	background:#D75656
+	}
+
+#leftMenu .active a {
+	background:#f3fae9
+	}	
+
+
+#leftMenu a {
+	display:block;
+	padding-left:10px;
+	background:#fff;
+	font-size:18px;
+	padding-top:6px;
+	height:29px;
 	}
 
 
 /* Footer */
+#footerCopyRight {
+	background:url(/images/bgr-footer.png) 0 0 no-repeat;
+	padding:20px 39px 0px 39px;
+	height:43px;
+	
+	}
+
+#footerCopyRight .floatLeft {
+	width: 201px;
+	color:#aeaeae
+	}
+
+#footerCopyRight .floatRight a {
+	color:#805e42
+	}
+
+#footerCopyRight .floatRight {
+	text-align:right;
+	width:670px;
+	}
+	
+#footerCopyRight strong, #footerCopyRight .floatRight {
+	font-weight:normal;	
+	color:#a6ad84
+	}
+
 #footer .breadcrumb {
 	bottom:5px;
 	position:absolute;
@@ -170,12 +231,24 @@ html[xmlns] .clearfix {
 	width:100%
 	}
 	
+#footerBox {
+	color:#56371a;
+	font-size:11px;
+	}	
 	
-#footerBox li {
-	float:left;
-	width:300px;
-	display: block;
+#footerBox span {
+	width:314px;
+	height:162px;
 	}
+	
+.va {
+	display:table-cell;
+	vertical-align: middle;
+	}
+	
+#footerBox .right {
+	background:url(/images/bgr-footer-right.png) 0px 0px no-repeat;
+	}	
 	
 #footerBox li.center {
 	padding-right: 2px;
