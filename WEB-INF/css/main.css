@@ -19,6 +19,7 @@ body {
 /* Helpers */
 
 .alignCenter { text-align: center }
+.alignMiddle { display:table-cell; vertical-align: middle }
 .alignLeft { text-align: left }
 .floatLeft { float: left }
 .floatRight { float: right }
@@ -70,7 +71,6 @@ html[xmlns] .clearfix {
 
 #body {
 	min-height: 240px;
-	height: 240px;
 	position: relative;
 	margin-top: 195px;
 	z-index:10;
@@ -91,11 +91,20 @@ html[xmlns] .clearfix {
 #header img.logo {
 	width:300px;
 	height:160px;
-	border:1px none;	
+	
 	}
 
 #header .content {
 	background:url(/images/bgr-header.png) 325px 5px no-repeat;
+	}
+	
+#header .content a {
+	display: block;
+	float:left;
+	}
+
+#language {
+	padding:10px 0px 0px 10px;
 	}
 
 #subheader {
@@ -107,19 +116,20 @@ html[xmlns] .clearfix {
 	width:640px
 	}
 
-.breadcrumb {
+.breadcrumb, .breadcrumb h3 {
 	font-size:11px	
 	}
 
-.breadcrumb li {
+.breadcrumb li, .breadcrumb li h3 {
+	font-weight:normal;
 	padding-left:5px;
 	display:inline;
 	}	
 
-#subheader .sectionHome {
-	color: #999	
+#subheader .breadcrumb li, #subheader .breadcrumb li h3 {
+	color: #999
 	}
-
+	
 #subheader .title {
 	padding-bottom:5px;
 	letter-spacing:2px
@@ -139,8 +149,19 @@ html[xmlns] .clearfix {
 	width:301px;
 	} 
 
+.wide #leftContainer {
+	width:100%;
+	position:absolute;
+	top:0px;
+	}
+
 #rightContainer {
-	width:694px;
+	padding-bottom:17px;
+	width:694px
+	}
+
+.wide #rightContainer {
+	width:100%;
 	}
 
 #rightContainer .content {
@@ -150,9 +171,20 @@ html[xmlns] .clearfix {
 	}
 
 
-#leftMenu {
-	
+.wide #rightContainer .content {
+	padding-top:61px;
+	width: 694px
 	}
+	
+#rightContainer .content h2 {
+	font-weight:normal;
+	font-size:26px;
+	color:#A6AD84
+	}
+		
+.wide #rightContainer .content h2 {
+	text-align:center
+	}	
 
 #leftMenu li {
 	margin:0 auto;
@@ -162,28 +194,46 @@ html[xmlns] .clearfix {
 	margin-bottom:17px;
 	}
 
+.wide #leftMenu li {
+	display:block;
+	float:left
+	}
+
 #leftMenu .aboutTheCompany.active {
 	background:#D79056	
 	}
 	
-#leftMenu .aboutTheCompany.active a {
+#leftMenu .aboutTheCompany.active a, #subheader .breadcrumb li.aboutTheCompany {
 	color:#D79056
 	}	
 	
 #leftMenu .services.active {
 	background:#56B7D7
 	}
+	
+#leftMenu .services.active a, #subheader .breadcrumb li.services {
+	color:#56B7D7
+	}	
 
-#leftMenu .onineConsultations.active {
+#leftMenu .onlineConsultations.active {
 	background:#BD56D7
 	}
+	
+#leftMenu .onlineConsultations.active a, #subheader .breadcrumb li.onlineConsultations {
+	color:#BD56D7
+	}	
 	
 #leftMenu .feedback.active {	
 	background:#D75656
 	}
+	
+#leftMenu .feedback.active a, #subheader .breadcrumb li.feedback {
+	color:#D75656
+	}	
 
 #leftMenu .active a {
-	background:#f3fae9
+	border-left: 5px solid #fff;
+	background:#f3f3f3
 	}	
 
 
@@ -201,8 +251,7 @@ html[xmlns] .clearfix {
 #footerCopyRight {
 	background:url(/images/bgr-footer.png) 0 0 no-repeat;
 	padding:20px 39px 0px 39px;
-	height:43px;
-	
+	height:63px;
 	}
 
 #footerCopyRight .floatLeft {
@@ -225,7 +274,7 @@ html[xmlns] .clearfix {
 	}
 
 #footer .breadcrumb {
-	bottom:5px;
+	bottom:7px;
 	position:absolute;
 	text-align:center;
 	width:100%
@@ -236,16 +285,21 @@ html[xmlns] .clearfix {
 	font-size:11px;
 	}	
 	
-#footerBox span {
-	width:314px;
-	height:162px;
+#footerBox div {
+	/*width:314px;*/
+	background:url(/images/bgr-footer-left-center.png) 0px 0px repeat-x;
+	width:284px;
+	text-align:center;
+	padding:0px 30px 0px 30px;
+	height:162px
 	}
-	
-.va {
-	display:table-cell;
-	vertical-align: middle;
+
+#footerBox .center {
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	width:370px
 	}
-	
+
 #footerBox .right {
 	background:url(/images/bgr-footer-right.png) 0px 0px no-repeat;
 	}	
